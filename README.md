@@ -7,6 +7,7 @@ Technologies in use:
 - [TypeScript](https://www.typescriptlang.org)
 - [Astro](https://astro.build)
 - Markdown for content
+- [Prettier](https://prettier.io), [Stylelint](https://stylelint.io), [lint-staged](https://github.com/okonet/lint-staged), and [husky](https://typicode.github.io/husky/#/) for linting and formatting
 - [Vercel](https://vercel.com) for hosting
 
 ## Getting Started

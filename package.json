@@ -5,12 +5,53 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "start": "astro preview",
+    "check": "npm-run-all --parallel check:*",
+    "check:code": "astro check",
+    "check:format": "prettier --check --cache --ignore-path .gitignore .",
+    "check:styles": "stylelint --formatter verbose --cache --cache-location cache/ --ignore-path .gitignore **/*.{astro,css}",
+    "fix": "npm-run-all --sequential fix:styles fix:format",
+    "fix:format": "prettier --write --cache --ignore-path .gitignore .",
+    "fix:styles": "stylelint --fix --formatter verbose --cache --cache-location cache/ --ignore-path .gitignore **/*.{astro,css}",
+    "prepare": "is-ci || husky install"
   },
   "dependencies": {
     "astro": "^1.5.0"
+  },
+  "devDependencies": {
+    "husky": "^7.0.0",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^13.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.5",
+    "stylelint": "^14.14.0",
+    "stylelint-config-astro": "^1.0.4",
+    "stylelint-config-css-modules": "^4.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^29.0.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-css-modules",
+      "stylelint-config-recess-order",
+      "stylelint-config-prettier",
+      "stylelint-config-astro"
+    ]
+  },
+  "lint-staged": {
+    "*.{astro,css}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "!*.{astro,css}": "prettier --write --ignore-unknown"
   }
 }
