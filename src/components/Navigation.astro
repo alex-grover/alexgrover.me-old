@@ -1,0 +1,140 @@
+---
+import Button from 'components/Button.astro'
+import NavIcon from 'components/NavIcon.astro'
+import { NAV_LINKS } from 'links'
+---
+
+<nav>
+  <Button type="button" class="nav-toggle open" aria-label="open menu">
+    <NavIcon name="menu" />
+  </Button>
+
+  <div id="nav-menu">
+    <ul>
+      {
+        NAV_LINKS.map(({ title, href }) => (
+          <li>
+            <a href={href}>{title}</a>
+          </li>
+        ))
+      }
+    </ul>
+    <Button type="button" class="nav-toggle" aria-label="close menu">
+      <NavIcon name="x" />
+    </Button>
+  </div>
+</nav>
+
+<script>
+  function toggleNav(event: Event) {
+    event.stopPropagation()
+    document.getElementById('nav-menu')?.classList.toggle('visible')
+  }
+
+  document.querySelectorAll('.nav-toggle').forEach((element) => {
+    element.addEventListener('click', toggleNav)
+  })
+
+  window.addEventListener('click', (event) => {
+    const menu = document.getElementById('nav-menu')
+    if (menu && !menu.contains(event.target as HTMLElement)) {
+      menu.classList.remove('visible')
+    }
+  })
+</script>
+
+<style>
+  div {
+    position: absolute;
+    top: var(--spacing-md);
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    pointer-events: none;
+    background: var(--background-color-secondary);
+    border-radius: var(--border-radius);
+    opacity: 0;
+    transition-timing-function: var(--transition-timing-function);
+    transition-duration: var(--transition-duration);
+    transition-property: transform, opacity;
+    transform: scale(0.8);
+    transform-origin: top right;
+  }
+
+  .visible {
+    pointer-events: unset;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  li:last-of-type {
+    margin-bottom: 0;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color var(--transition-duration)
+      var(--transition-timing-function);
+  }
+
+  a:hover {
+    color: var(--text-color-link);
+  }
+
+  .open {
+    margin-right: var(--spacing-lg);
+  }
+
+  @media (--tablet-portrait-up) {
+    div {
+      left: unset;
+      width: 300px;
+    }
+  }
+
+  @media (--tablet-landscape-up) {
+    div {
+      position: unset;
+      width: unset;
+      padding: unset;
+      pointer-events: unset;
+      background-color: unset;
+      opacity: unset;
+      transform: unset;
+    }
+
+    ul {
+      flex-direction: row;
+    }
+
+    li {
+      margin: 0 var(--spacing-lg) 0 0;
+    }
+
+    .nav-toggle {
+      display: none;
+    }
+  }
+</style>

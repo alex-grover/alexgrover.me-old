@@ -1,0 +1,32 @@
+---
+import Navigation from 'components/Navigation.astro'
+import { NAME } from '../constants'
+---
+
+<header>
+  <a href="/">{NAME}</a>
+  <div>
+    <Navigation />
+  </div>
+</header>
+
+<style>
+  header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-md) 0;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: inherit;
+    text-decoration: none;
+  }
+</style>

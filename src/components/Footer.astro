@@ -1,0 +1,74 @@
+---
+import LINK_SECTIONS from 'links'
+---
+
+<footer>
+  {
+    LINK_SECTIONS.map(({ title, links }) => (
+      <div class="section">
+        <div class="section-title">{title}</div>
+        <ul>
+          {links.map(({ title, href }) => (
+            <li>
+              <a href={href}>{title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--spacing-xxl) 0;
+  }
+
+  .section {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .section:last-child {
+    margin: 0;
+  }
+
+  .section-title {
+    margin-bottom: var(--spacing-md);
+    font-weight: var(--font-weight-bold);
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  a {
+    display: block;
+    padding: var(--spacing-xs) 0;
+    color: var(--text-color-secondary);
+    transition: color var(--transition-duration)
+      var(--transition-timing-function);
+  }
+
+  a:hover {
+    color: var(--text-color-link);
+  }
+
+  @media (--tablet-portrait-up) {
+    footer {
+      flex-direction: row;
+    }
+
+    .section {
+      margin: 0;
+    }
+  }
+</style>

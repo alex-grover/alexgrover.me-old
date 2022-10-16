@@ -1,43 +1,53 @@
 ---
-export interface Props {
-  title: string
-}
-
-const { title } = Astro.props
+import Divider from 'components/Divider.astro'
+import Footer from 'components/Footer.astro'
+import Header from 'components/Header.astro'
+import 'global.css'
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <slot />
-    <style is:global>
-      :root {
-        --accent: 124, 58, 237;
-        --accent-gradient: linear-gradient(
-          45deg,
-          rgb(var(--accent)),
-          #da62c4 30%,
-          white 60%
-        );
+    <style>
+      body {
+        margin: 0;
+        color: var(--text-color);
+        background-color: var(--background-color);
       }
 
-      html {
-        font-family: system-ui, sans-serif;
-        background-color: #f6f6f6;
+      div {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 900px; /* --tablet-landscape-up */
+        min-height: 100vh;
+        padding: 0 var(--spacing-md);
+        margin: 0 auto;
       }
 
-      code {
-        font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono',
-          'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New',
-          monospace;
+      main {
+        flex-grow: 1;
+      }
+
+      @media (--tablet-landscape-up) {
+        div {
+          padding: 0;
+        }
       }
     </style>
+  </head>
+  <body>
+    <div>
+      <Header />
+      <main>
+        <slot />
+      </main>
+      <Divider />
+      <Footer />
+    </div>
   </body>
 </html>
