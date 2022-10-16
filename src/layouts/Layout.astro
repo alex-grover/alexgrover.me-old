@@ -1,10 +1,40 @@
 ---
+import { SEO, Props as SEOProps } from 'astro-seo'
 import Themes from 'astro-themes'
 
 import Divider from 'components/Divider.astro'
 import Footer from 'components/Footer.astro'
 import Header from 'components/Header.astro'
+import {
+  DESCRIPTION,
+  NAME,
+  SEPARATOR,
+  TAGLINE,
+  TWITTER_USERNAME,
+} from '../constants'
 import 'global.css'
+
+export interface Props {
+  title?: string
+  article?: NonNullable<SEOProps['openGraph']>['article']
+}
+
+const { article, title } = Astro.props as Props
+
+const openGraph: SEOProps['openGraph'] = {
+  basic: {
+    title: `${title ?? TAGLINE} ${SEPARATOR} ${Astro.url.hostname}`,
+    type: article ? 'article' : 'website',
+    image: '/og.png',
+  },
+  image: {
+    alt: `${NAME}'s logo`,
+    width: 1200,
+    height: 1200,
+  },
+}
+
+if (article) openGraph.article = article
 ---
 
 <!DOCTYPE html>
@@ -14,6 +44,16 @@ import 'global.css'
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <Themes />
+    <SEO
+      title={`${NAME} ${SEPARATOR} ${title ?? TAGLINE}`}
+      description={DESCRIPTION}
+      openGraph={openGraph}
+      twitter={{
+        card: 'summary',
+        creator: `@${TWITTER_USERNAME}`,
+        site: `@${TWITTER_USERNAME}`,
+      }}
+    />
     <style>
       body {
         margin: 0;
