@@ -1,0 +1,47 @@
+---
+import Button from 'components/Button.astro'
+import NavIcon from 'components/NavIcon.astro'
+---
+
+<Button type="button" aria-label="toggle theme">
+  <NavIcon name="sun" id="theme-toggle-light" />
+  <NavIcon name="moon" id="theme-toggle-dark" />
+</Button>
+
+<script>
+  import type { Theme } from 'astro-themes'
+
+  function setTheme(theme: Theme) {
+    document.dispatchEvent(new CustomEvent('set-theme', { detail: theme }))
+  }
+
+  function setDarkTheme() {
+    setTheme('dark')
+  }
+
+  function setLightTheme() {
+    setTheme('light')
+  }
+
+  document
+    .getElementById('theme-toggle-dark')
+    ?.addEventListener('click', setDarkTheme)
+
+  document
+    .getElementById('theme-toggle-light')
+    ?.addEventListener('click', setLightTheme)
+</script>
+
+<style is:global>
+  /* stylelint-disable no-descending-specificity */
+
+  #theme-toggle-dark,
+  [data-theme='dark'] #theme-toggle-light {
+    display: block;
+  }
+
+  #theme-toggle-light,
+  [data-theme='dark'] #theme-toggle-dark {
+    display: none;
+  }
+</style>
