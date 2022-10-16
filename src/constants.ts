@@ -1,3 +1,4 @@
+export const SITE = 'https://alexgrover.me'
 export const NAME = 'Alex Grover'
 export const SEPARATOR = '|'
 export const TAGLINE = 'Create > Consume'
