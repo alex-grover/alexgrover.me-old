@@ -19,3 +19,9 @@ Technologies in use:
 - `gh repo clone alex-grover/alexgrover.me`
 - `npm install`
 - `npm run dev`
+
+### To Customize
+
+- Update `constants.ts` with your preferred values
+- Update favicons
+- Update `theme-color` meta tags

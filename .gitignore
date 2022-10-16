@@ -17,3 +17,6 @@ npm-debug.log*
 
 # tools
 cache/
+
+# macOS
+.DS_Store
