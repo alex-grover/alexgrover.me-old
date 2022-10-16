@@ -17,12 +17,13 @@
     "prepare": "is-ci || husky install"
   },
   "dependencies": {
-    "astro": "^1.5.0"
-  },
-  "devDependencies": {
+    "astro": "^1.5.0",
+    "astro-compress": "^1.0.12",
     "astro-icon": "^0.7.3",
     "astro-seo": "^0.6.0",
-    "astro-themes": "^0.2.3",
+    "astro-themes": "^0.2.3"
+  },
+  "devDependencies": {
     "husky": "^7.0.0",
     "is-ci": "^3.0.1",
     "lint-staged": "^13.0.3",
