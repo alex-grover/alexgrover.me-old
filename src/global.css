@@ -12,6 +12,8 @@
   --text-color-secondary: #454545;
   --text-color-link: #0080bb;
   --font-size-lg: 1.5rem;
+  --font-size-xl: 6rem;
+  --font-size-xxl: 10rem;
   --font-weight-bold: 600;
   --transition-duration: 0.2s;
   --transition-timing-function: ease-in-out;

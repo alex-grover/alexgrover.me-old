@@ -1,0 +1,54 @@
+---
+import { Icon } from 'astro-icon'
+import Layout from 'layouts/Layout.astro'
+---
+
+<Layout>
+  <div>
+    <h1>404</h1>
+    <div>Page not found</div>
+    <p>
+      <a href="/">
+        <span>Go home</span>
+        <Icon name="heroicons-outline:arrow-right" />
+      </a>
+    </p>
+  </div>
+</Layout>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: var(--font-size-xl);
+    color: var(--text-color-secondary);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: var(--text-color-link);
+    text-decoration: none;
+  }
+
+  a:hover {
+    filter: brightness(115%);
+  }
+
+  svg {
+    height: 1rem;
+    margin-left: var(--spacing-sm);
+  }
+
+  @media (--tablet-portrait-up) {
+    h1 {
+      font-size: var(--font-size-xxl);
+    }
+  }
+</style>
