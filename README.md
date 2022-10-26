@@ -11,6 +11,9 @@ Technologies in use:
 - [astro-themes](https://github.com/alex-grover/astro-themes) for dark mode
 - [postcss-custom-media](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media) to use the Stage 2 CSS feature and consolidate media queries
 - [Prettier](https://prettier.io), [Stylelint](https://stylelint.io), [lint-staged](https://github.com/okonet/lint-staged), and [husky](https://typicode.github.io/husky/#/) for linting and formatting
+- [Playwright](https://playwright.dev) for testing
+- [GitHub Actions](https://github.com/features/actions) to run CI jobs
+- [Dependabot](https://github.com/features/security/) to keep dependencies up to date
 - [Vercel](https://vercel.com) for hosting
 
 ## Getting Started
