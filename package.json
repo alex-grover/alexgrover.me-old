@@ -14,6 +14,8 @@
     "fix": "npm-run-all --sequential fix:styles fix:format",
     "fix:format": "prettier --write --cache --ignore-path .gitignore .",
     "fix:styles": "stylelint --fix --formatter verbose --cache --cache-location cache/ --ignore-path .gitignore **/*.{astro,css}",
+    "test": "playwright test",
+    "test:install": "playwright install --with-deps",
     "prepare": "is-ci || husky install"
   },
   "dependencies": {
@@ -24,6 +26,7 @@
     "astro-themes": "^0.2.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.27.1",
     "husky": "^8.0.1",
     "is-ci": "^3.0.1",
     "lint-staged": "^13.0.3",
