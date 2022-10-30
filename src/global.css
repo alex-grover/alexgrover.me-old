@@ -17,6 +17,8 @@
   --font-weight-bold: 600;
   --transition-duration: 0.2s;
   --transition-timing-function: ease-in-out;
+
+  font-family: Verdana, sans-serif;
 }
 
 [data-theme='dark'] {
@@ -24,10 +26,9 @@
   --background-color-secondary: #303030;
   --text-color: #f1f1f1;
   --text-color-secondary: #cbcbcb;
-}
 
-* {
-  font-family: Verdana, Geneva, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @custom-media --tablet-portrait-up (min-width: 600px);
