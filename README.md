@@ -14,13 +14,14 @@ Technologies in use:
 - [Playwright](https://playwright.dev) for testing
 - [GitHub Actions](https://github.com/features/actions) to run CI jobs
 - [Dependabot](https://github.com/features/security/) to keep dependencies up to date
-- [Vercel](https://vercel.com) for hosting
+- [Vercel](https://vercel.com) for hosting and analytics
 
 ## Getting Started
 
 - Install Node.js
 - `gh repo clone alex-grover/alexgrover.me`
 - `npm install`
+- `npx vercel env pull .env.local`
 - `npm run dev`
 
 ### To Customize

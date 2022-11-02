@@ -9,8 +9,7 @@ node_modules/
 npm-debug.log*
 
 # environment variables
-.env
-.env.production
+.env*
 
 # editor files
 .idea/
@@ -25,3 +24,6 @@ cache/
 /test-results/
 /playwright-report/
 /playwright/.cache/
+
+# vercel
+.vercel
