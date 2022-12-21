@@ -1,5 +1,9 @@
 const customMedia = require('postcss-custom-media')
 
 module.exports = {
-  plugins: [customMedia({})],
+  plugins: [
+    customMedia({
+      importFrom: ['src/media.css'],
+    }),
+  ],
 }

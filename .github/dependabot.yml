@@ -1,9 +1,11 @@
 version: 2
 
 updates:
-  - package-ecosystem: 'npm'
-    directory: '/'
+  - package-ecosystem: npm
+    directory: /
     schedule:
-      interval: 'weekly'
+      interval: weekly
     reviewers:
-      - 'alex-grover'
+      - alex-grover
+    ignore:
+      - dependency-name: postcss-custom-media

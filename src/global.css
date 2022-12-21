@@ -30,6 +30,3 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-@custom-media --tablet-portrait-up (min-width: 600px);
-@custom-media --tablet-landscape-up (min-width: 900px);
