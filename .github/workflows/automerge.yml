@@ -3,7 +3,7 @@ name: Automerge
 on: pull_request_target
 
 jobs:
-  dependabot:
+  automerge:
     if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
