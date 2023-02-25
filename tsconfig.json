@@ -14,7 +14,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noUncheckedIndexedAccess": true,
-    "baseUrl": "src",
-    "types": ["astro/client"]
+    "baseUrl": "src"
   }
 }
