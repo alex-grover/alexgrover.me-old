@@ -3,6 +3,7 @@ import {
   GITHUB_USERNAME,
   INSTAGRAM_USERNAME,
   LINKEDIN_USERNAME,
+  READ_CV_USERNAME,
   TWITTER_USERNAME,
 } from './constants'
 
@@ -20,6 +21,10 @@ export const NAV_LINKS: Link[] = [
   {
     title: 'Home',
     href: '/',
+  },
+  {
+    title: 'Work',
+    href: `https://read.cv/${READ_CV_USERNAME}`,
   },
 ]
 
