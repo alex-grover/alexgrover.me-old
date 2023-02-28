@@ -1,5 +1,48 @@
 ---
+import { getCollection } from 'astro:content'
 import Layout from 'layouts/Layout.astro'
+
+const blogEntries = await getCollection(
+  'blog',
+  ({ data }) => data.draft !== true
+)
 ---
 
-<Layout />
+<Layout>
+  <h2>Writing</h2>
+  <ul>
+    {
+      blogEntries.map((entry) => (
+        <li>
+          <h3>
+            <a href={`/posts/${entry.slug}`}>{entry.data.title}</a>
+          </h3>
+          <p>{entry.data.description}</p>
+          <time datetime={entry.data.pubDate.toDateString()}>
+            {entry.data.pubDate.toLocaleDateString()}
+          </time>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
+
+<style>
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: var(--text-color);
+  }
+
+  a:hover {
+    color: var(--text-color-link);
+  }
+
+  time {
+    font-size: var(--font-size-sm);
+    color: var(--text-color-secondary);
+  }
+</style>

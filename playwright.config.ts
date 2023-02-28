@@ -10,7 +10,6 @@ const config: PlaywrightTestConfig = {
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CI ? 'github' : 'list',
   use: {
     actionTimeout: 0,
@@ -38,7 +37,7 @@ const config: PlaywrightTestConfig = {
     },
   ],
   webServer: process.env.CI
-    ? undefined
+    ? []
     : {
         command: 'npm run build && npm run start',
         port: 3000,

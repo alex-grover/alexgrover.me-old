@@ -27,3 +27,6 @@ cache/
 
 # vercel
 .vercel
+
+# generated files
+.astro

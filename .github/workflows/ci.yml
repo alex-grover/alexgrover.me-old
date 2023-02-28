@@ -18,6 +18,8 @@ jobs:
         run: npm ci
       - name: Check code
         run: npm run check:code
+      - name: Check types
+        run: npm run check:types
       - name: Check formatting
         run: npm run check:format
       - name: Check styles
