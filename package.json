@@ -40,7 +40,7 @@
     "stylelint": "^15.2.0",
     "stylelint-config-astro": "^1.0.4",
     "stylelint-config-css-modules": "^4.2.0",
-    "stylelint-config-recess-order": "^3.1.0",
+    "stylelint-config-recess-order": "^4.0.0",
     "stylelint-config-standard": "^30.0.1",
     "vercel": "^28.16.7"
   },
