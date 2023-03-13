@@ -1,1 +1,9 @@
-{ "cleanUrls": true, "trailingSlash": false }
+{
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/about",
+      "destination": "/"
+    }
+  ]
+}
