@@ -19,7 +19,8 @@
   --transition-duration: 0.2s;
   --transition-timing-function: ease-in-out;
 
-  font-family: Verdana, sans-serif;
+  font-family: Avenir, 'Avenir Next LT Pro', Montserrat, Corbel, 'URW Gothic',
+    source-sans-pro, sans-serif;
 }
 
 [data-theme='dark'] {
