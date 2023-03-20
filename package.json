@@ -47,7 +47,7 @@
     "stylelint-config-css-modules": "^4.2.0",
     "stylelint-config-recess-order": "^4.0.0",
     "stylelint-config-standard": "^30.0.1",
-    "vercel": "^28.16.15"
+    "vercel": "^28.17.0"
   },
   "prettier": {
     "semi": false,
