@@ -1,7 +1,8 @@
-import compress from 'astro-compress'
-import { defineConfig } from 'astro/config'
-import { SITE } from './src/constants'
 import sitemap from '@astrojs/sitemap'
+import vercel from '@astrojs/vercel/static'
+import { defineConfig } from 'astro/config'
+import compress from 'astro-compress'
+import { SITE } from './src/constants'
 
 export default defineConfig({
   site: SITE,
@@ -13,4 +14,8 @@ export default defineConfig({
       },
     },
   },
+  output: 'static',
+  adapter: vercel({
+    analytics: true,
+  }),
 })
