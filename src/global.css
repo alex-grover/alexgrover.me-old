@@ -6,9 +6,7 @@
   --spacing-lg: 24px;
   --spacing-xl: 32px;
   --spacing-xxl: 48px;
-  --background-color: #f1f1f1;
   --background-color-secondary: #e2e2e2;
-  --text-color: #1b1b1b;
   --text-color-secondary: #454545;
   --text-color-link: #0080bb;
   --font-size-sm: 0.75rem;
@@ -24,9 +22,7 @@
 }
 
 [data-theme='dark'] {
-  --background-color: #1b1b1b;
   --background-color-secondary: #303030;
-  --text-color: #f1f1f1;
   --text-color-secondary: #cbcbcb;
 
   -webkit-font-smoothing: antialiased;

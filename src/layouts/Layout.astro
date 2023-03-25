@@ -69,10 +69,41 @@ if (article) openGraph.article = article
       }}
     />
     <style>
+      :root {
+        --c-bg: #f1f1f1;
+        --c-text: #1b1b1b;
+      }
+
+      [data-theme='dark'] {
+        --c-bg: #1b1b1b;
+        --c-text: #f1f1f1;
+      }
+
+      @supports not (color-scheme: light dark) {
+        html {
+          color: var(--c-text);
+          background: var(--c-bg);
+        }
+      }
+
+      @supports (color-scheme: light dark) and (background-color: Canvas) and
+        (color: CanvasText) {
+        :root {
+          --c-bg: Canvas;
+          --c-text: CanvasText;
+        }
+      }
+
+      @supports (background-color: -apple-system-control-background) and
+        (color: text) {
+        :root {
+          --c-bg: -apple-system-control-background;
+          --c-text: text;
+        }
+      }
+
       body {
         margin: 0;
-        color: var(--text-color);
-        background-color: var(--background-color);
       }
 
       div {

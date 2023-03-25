@@ -306,7 +306,7 @@ In particular, some things that I think they get wrong:
   </g>
   <style>
     .svg-label {
-      fill: var(--text-color);
+      fill: var(--c-text);
     }
   </style>
 </svg>
