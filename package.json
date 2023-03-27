@@ -20,7 +20,7 @@
     "prepare": "is-ci || husky install"
   },
   "dependencies": {
-    "@astrojs/rss": "^2.3.0",
+    "@astrojs/rss": "^2.3.1",
     "@astrojs/sitemap": "^1.2.1",
     "@astrojs/vercel": "^3.2.1",
     "astro": "^2.1.5",
