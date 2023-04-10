@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "^2.3.2",
-    "@astrojs/sitemap": "^1.2.1",
+    "@astrojs/sitemap": "^1.2.2",
     "@astrojs/vercel": "^3.2.1",
     "astro": "^2.1.9",
     "astro-compress": "^1.1.35",
