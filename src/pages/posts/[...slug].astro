@@ -34,6 +34,10 @@ const { Content } = await entry.render()
 
 <style>
   article :global(a) {
-    color: var(--text-color-link);
+    color: var(--c-link);
+  }
+
+  article :global(a:hover) {
+    filter: brightness(115%);
   }
 </style>
