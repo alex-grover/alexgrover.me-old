@@ -6,7 +6,6 @@
   --spacing-lg: 24px;
   --spacing-xl: 32px;
   --spacing-xxl: 48px;
-  --background-color-secondary: #e2e2e2;
   --text-color-secondary: #454545;
   --font-size-sm: 0.75rem;
   --font-size-lg: 1.5rem;
@@ -15,15 +14,8 @@
   --font-weight-bold: 600;
   --transition-duration: 0.2s;
   --transition-timing-function: ease-in-out;
-
-  font-family: Avenir, 'Avenir Next LT Pro', Montserrat, Corbel, 'URW Gothic',
-    source-sans-pro, sans-serif;
 }
 
 [data-theme='dark'] {
-  --background-color-secondary: #303030;
   --text-color-secondary: #cbcbcb;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }

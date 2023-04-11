@@ -2,7 +2,6 @@
 import { SEO, Props as SEOProps } from 'astro-seo'
 import Themes from 'astro-themes'
 
-import Divider from 'components/Divider.astro'
 import Footer from 'components/Footer.astro'
 import Header from 'components/Header.astro'
 import {
@@ -70,44 +69,27 @@ if (article) openGraph.article = article
     />
     <style>
       :root {
-        --c-bg: #f1f1f1;
+        /* Generally applicable styles */
+        font-family: Avenir, 'Avenir Next LT Pro', Montserrat, Corbel,
+          'URW Gothic', source-sans-pro, sans-serif;
+        color: var(--c-text);
+        background: var(--c-bg);
+
+        /* Generally applicable variables */
+        --shadow: 0 0 4px 2px var(--c-border);
+
+        /* Theming variables, overridden below */
+        --c-bg: #fff;
         --c-text: #1b1b1b;
         --c-link: #3679f6;
+        --c-border: #e2e2e2;
       }
 
       [data-theme='dark'] {
-        --c-bg: #1b1b1b;
-        --c-text: #f1f1f1;
+        --c-bg: #1e1e1e;
+        --c-text: #fff;
         --c-link: #3a7fef;
-      }
-
-      @supports not (color-scheme: light dark) {
-        html {
-          color: var(--c-text);
-          background: var(--c-bg);
-        }
-      }
-
-      @supports (color-scheme: light dark) and (background-color: Canvas) and
-        (color: CanvasText) and (color: LinkText) {
-        :root {
-          --c-bg: Canvas;
-          --c-text: CanvasText;
-          --c-link: LinkText;
-        }
-
-        /* Safari doesn't specify a good LinkText for color-scheme: dark */
-        [data-theme='dark'] {
-          --c-link: #3a7fef;
-        }
-      }
-
-      @supports not (background-color: Canvas) and not (color: CanvasText) and
-        (background-color: -apple-system-control-background) and (color: text) {
-        :root {
-          --c-bg: -apple-system-control-background;
-          --c-text: text;
-        }
+        --c-border: #303030;
       }
 
       body {
@@ -127,6 +109,7 @@ if (article) openGraph.article = article
 
       main {
         flex-grow: 1;
+        border-bottom: 1px solid var(--c-border);
       }
 
       @media (--tablet-landscape-up) {
@@ -142,7 +125,6 @@ if (article) openGraph.article = article
       <main>
         <slot />
       </main>
-      <Divider />
       <Footer />
     </div>
   </body>
