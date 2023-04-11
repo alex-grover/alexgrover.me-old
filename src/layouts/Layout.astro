@@ -11,7 +11,6 @@ import {
   TAGLINE,
   TWITTER_USERNAME,
 } from '../constants'
-import 'global.css'
 
 export interface Props {
   title?: string
@@ -76,11 +75,26 @@ if (article) openGraph.article = article
         background: var(--c-bg);
 
         /* Generally applicable variables */
+        --border-radius: 6px;
+        --spacing-xs: 2px;
+        --spacing-sm: 8px;
+        --spacing-md: 16px;
+        --spacing-lg: 24px;
+        --spacing-xl: 32px;
+        --spacing-xxl: 48px;
+        --font-size-sm: 0.75rem;
+        --font-size-lg: 1.5rem;
+        --font-size-xl: 6rem;
+        --font-size-xxl: 10rem;
+        --font-weight-bold: 600;
+        --transition-duration: 0.2s;
+        --transition-timing-function: ease-in-out;
         --shadow: 0 0 4px 2px var(--c-border);
 
         /* Theming variables, overridden below */
         --c-bg: #fff;
         --c-text: #1b1b1b;
+        --c-text-light: #454545;
         --c-link: #3679f6;
         --c-border: #e2e2e2;
       }
@@ -88,6 +102,7 @@ if (article) openGraph.article = article
       [data-theme='dark'] {
         --c-bg: #1e1e1e;
         --c-text: #fff;
+        --c-text-light: #cbcbcb;
         --c-link: #3a7fef;
         --c-border: #303030;
       }
