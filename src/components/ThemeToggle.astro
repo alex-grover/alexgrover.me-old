@@ -32,20 +32,15 @@ import NavIcon from 'components/NavIcon.astro'
     ?.addEventListener('click', setLightTheme)
 </script>
 
-<style>
-  #theme-toggle-dark {
+<style is:global>
+  #theme-toggle-dark,
+  [data-theme='dark'] #theme-toggle-light {
     display: block;
   }
 
-  #theme-toggle-light {
-    display: none;
-  }
-
-  :global([data-theme='dark']) #theme-toggle-light {
-    display: block;
-  }
-
-  :global([data-theme='dark']) #theme-toggle-dark {
+  /* stylelint-disable-next-line no-descending-specificity */
+  #theme-toggle-light,
+  [data-theme='dark'] #theme-toggle-dark {
     display: none;
   }
 </style>
