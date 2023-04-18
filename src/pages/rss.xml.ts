@@ -19,5 +19,6 @@ export async function get() {
       ...post.data,
     })),
     stylesheet: '/pretty-feed.xsl',
+    trailingSlash: false,
   })
 }
