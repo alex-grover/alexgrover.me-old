@@ -5,11 +5,11 @@ import { NAV_LINKS } from 'links'
 ---
 
 <nav>
-  <Button type="button" class="nav-toggle open" aria-label="open menu">
+  <Button type="button" class="open" aria-label="open menu" data-nav-toggle>
     <NavIcon name="menu" />
   </Button>
 
-  <div id="nav-menu">
+  <div data-nav-menu>
     <ul>
       {
         NAV_LINKS.map(({ title, href }) => (
@@ -19,25 +19,25 @@ import { NAV_LINKS } from 'links'
         ))
       }
     </ul>
-    <Button type="button" class="nav-toggle" aria-label="close menu">
+    <Button type="button" aria-label="close menu" data-nav-toggle>
       <NavIcon name="x" />
     </Button>
   </div>
 </nav>
 
-<script>
-  function toggleNav(event: Event) {
+<script is:inline>
+  function toggleNav(event) {
     event.stopPropagation()
-    document.getElementById('nav-menu')?.classList.toggle('visible')
+    document.querySelector('[data-nav-menu]')?.classList.toggle('visible')
   }
 
-  document.querySelectorAll('.nav-toggle').forEach((element) => {
+  document.querySelectorAll('[data-nav-toggle]').forEach((element) => {
     element.addEventListener('click', toggleNav)
   })
 
   window.addEventListener('click', (event) => {
-    const menu = document.getElementById('nav-menu')
-    if (menu && !menu.contains(event.target as HTMLElement)) {
+    const menu = document.querySelector('[data-nav-menu]')
+    if (menu && !menu.contains(event.target)) {
       menu.classList.remove('visible')
     }
   })
@@ -133,7 +133,7 @@ import { NAV_LINKS } from 'links'
       margin: 0 var(--spacing-lg) 0 0;
     }
 
-    .nav-toggle {
+    [data-nav-toggle] {
       display: none;
     }
   }

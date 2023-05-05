@@ -4,8 +4,8 @@ import NavIcon from 'components/NavIcon.astro'
 ---
 
 <Button type="button" aria-label="toggle theme">
-  <NavIcon name="sun" id="theme-toggle-light" />
-  <NavIcon name="moon" id="theme-toggle-dark" />
+  <NavIcon name="sun" data-theme-toggle="light" />
+  <NavIcon name="moon" data-theme-toggle="dark" />
 </Button>
 
 <script>
@@ -24,23 +24,23 @@ import NavIcon from 'components/NavIcon.astro'
   }
 
   document
-    .getElementById('theme-toggle-dark')
+    .querySelector("[data-theme-toggle='dark']")
     ?.addEventListener('click', setDarkTheme)
 
   document
-    .getElementById('theme-toggle-light')
+    .querySelector("[data-theme-toggle='light']")
     ?.addEventListener('click', setLightTheme)
 </script>
 
 <style is:global>
-  #theme-toggle-dark,
-  [data-theme='dark'] #theme-toggle-light {
+  [data-theme-toggle='dark'],
+  [data-theme='dark'] [data-theme-toggle='light'] {
     display: block;
   }
 
   /* stylelint-disable-next-line no-descending-specificity */
-  #theme-toggle-light,
-  [data-theme='dark'] #theme-toggle-dark {
+  [data-theme-toggle='light'],
+  [data-theme='dark'] [data-theme-toggle='dark'] {
     display: none;
   }
 </style>
