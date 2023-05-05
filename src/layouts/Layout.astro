@@ -1,145 +1,40 @@
 ---
-import { SEO, Props as SEOProps } from 'astro-seo'
-import Themes from 'astro-themes'
-
 import Footer from 'components/Footer.astro'
 import Header from 'components/Header.astro'
-import {
-  DESCRIPTION,
-  NAME,
-  SEPARATOR,
-  TAGLINE,
-  TWITTER_USERNAME,
-} from '../constants'
+import Document, { Props as DocumentProps } from './Document.astro'
 
-export interface Props {
-  title?: string
-  article?: NonNullable<SEOProps['openGraph']>['article']
-}
-
-const { article, title } = Astro.props
-
-const openGraph: SEOProps['openGraph'] = {
-  basic: {
-    title: `${title ?? TAGLINE} ${SEPARATOR} ${Astro.url.hostname}`,
-    type: article ? 'article' : 'website',
-    image: '/og.png',
-  },
-  image: {
-    alt: `${NAME}'s logo`,
-    width: 1200,
-    height: 1200,
-  },
-}
-
-if (article) openGraph.article = article
+export type Props = DocumentProps
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="generator" content={Astro.generator} />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: light)"
-      content="white"
-    />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="black"
-    />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <Themes />
-    <SEO
-      title={`${NAME} ${SEPARATOR} ${title ?? TAGLINE}`}
-      description={DESCRIPTION}
-      openGraph={openGraph}
-      twitter={{
-        card: 'summary',
-        creator: `@${TWITTER_USERNAME}`,
-        site: `@${TWITTER_USERNAME}`,
-      }}
-    />
-    <style>
-      :root {
-        /* Generally applicable styles */
-        font-family: Avenir, 'Avenir Next LT Pro', Montserrat, Corbel,
-          'URW Gothic', source-sans-pro, sans-serif;
-        color: var(--c-text);
-        background: var(--c-bg);
+<Document {...Astro.props}>
+  <div>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </div>
+</Document>
 
-        /* Generally applicable variables */
-        --spacing-xs: 2px;
-        --spacing-sm: 8px;
-        --spacing-md: 16px;
-        --spacing-lg: 24px;
-        --spacing-xl: 32px;
-        --spacing-xxl: 48px;
-        --fs-sm: 0.75rem;
-        --fs-lg: 1.5rem;
-        --fs-xl: 6rem;
-        --fs-xxl: 10rem;
-        --t-duration: 0.2s;
-        --t-timing: ease-in-out;
-        --radius: 6px;
-        --shadow: 0 0 4px 2px var(--c-border);
+<style>
+  div {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px; /* --tablet-landscape-up */
+    min-height: 100vh;
+    padding: 0 var(--spacing-md);
+    margin: 0 auto;
+  }
 
-        /* Theming variables, overridden below */
-        --c-bg: #fff;
-        --c-text: #1b1b1b;
-        --c-text-light: #454545;
-        --c-link: #3679f6;
-        --c-border: #e2e2e2;
-      }
+  main {
+    flex-grow: 1;
+  }
 
-      [data-theme='dark'] {
-        --c-bg: #1e1e1e;
-        --c-text: #fff;
-        --c-text-light: #cbcbcb;
-        --c-link: #3a7fef;
-        --c-border: #303030;
-      }
-
-      body {
-        margin: 0;
-      }
-
-      div {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 900px; /* --tablet-landscape-up */
-        min-height: 100vh;
-        padding: 0 var(--spacing-md);
-        margin: 0 auto;
-      }
-
-      main {
-        flex-grow: 1;
-        border-bottom: 1px solid var(--c-border);
-      }
-
-      @media (--tablet-landscape-up) {
-        div {
-          padding: 0;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div>
-      <Header />
-      <main>
-        <slot />
-      </main>
-      <Footer />
-    </div>
-  </body>
-</html>
+  @media (--tablet-landscape-up) {
+    div {
+      padding: 0;
+    }
+  }
+</style>

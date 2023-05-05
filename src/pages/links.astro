@@ -1,0 +1,105 @@
+---
+import Icon from 'astro-icon'
+import ThemeToggle from 'components/ThemeToggle.astro'
+import Document from 'layouts/Document.astro'
+import {
+  FOUNDATION_USERNAME,
+  INSTAGRAM_USERNAME,
+  NAME,
+  TWITTER_USERNAME,
+} from '../constants'
+---
+
+<Document title="Links">
+  <div class="container">
+    <div class="theme">
+      <ThemeToggle />
+    </div>
+    <div class="name">{NAME}</div>
+    <img src="/profile.jpg" alt="Alex Grover's profile picture" />
+    <ul>
+      <li>
+        <a href="/">
+          <span>Website</span>
+          <Icon name="mdi:laptop" />
+        </a>
+      </li>
+      <li>
+        <a href={`https://www.instagram.com/${INSTAGRAM_USERNAME}/`}>
+          <span>Instagram</span>
+          <Icon name="mdi:instagram" />
+        </a>
+      </li>
+      <li>
+        <a href={`https://twitter.com/${TWITTER_USERNAME}`}>
+          <span>Twitter</span>
+          <Icon name="mdi:twitter" />
+        </a>
+      </li>
+      <li>
+        <a href={`https://foundation.app/${FOUNDATION_USERNAME}`}>
+          <span>Foundation NFTs</span>
+          <Icon name="mdi:triangle" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</Document>
+
+<style>
+  .container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+    padding: var(--spacing-xl);
+    margin: 0 auto;
+  }
+
+  .theme {
+    display: flex;
+    justify-content: end;
+  }
+
+  .name {
+    margin: 0 auto;
+    font-size: var(--fs-xl);
+    font-weight: bold;
+  }
+
+  img {
+    --size: 220px;
+
+    width: var(--size);
+    height: var(--size);
+    margin: var(--spacing-lg) auto;
+    border-radius: var(--r-full);
+    object-fit: cover;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-lg) 0;
+    color: var(--c-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--c-border);
+  }
+
+  span {
+    text-transform: uppercase;
+  }
+
+  svg {
+    height: 1.5rem;
+  }
+</style>
