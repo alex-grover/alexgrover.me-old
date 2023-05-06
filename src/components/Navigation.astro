@@ -2,6 +2,8 @@
 import Icon from 'astro-icon'
 import Button from 'components/Button.astro'
 import {
+  FOUNDATION_USERNAME,
+  GITHUB_USERNAME,
   INSTAGRAM_USERNAME,
   READ_CV_USERNAME,
   TWITTER_USERNAME,
@@ -19,6 +21,12 @@ import {
         <a href={`https://read.cv/${READ_CV_USERNAME}`}>Work</a>
       </li>
       <li>
+        <a href={`https://foundation.app/${FOUNDATION_USERNAME}`}>
+          <span>Foundation&nbsp;</span>
+          <span class="show">NFTs</span>
+        </a>
+      </li>
+      <li>
         <a href={`https://www.instagram.com/${INSTAGRAM_USERNAME}/`}>
           <Icon name="mdi:instagram" />
           <span>Instagram</span>
@@ -28,6 +36,12 @@ import {
         <a href={`https://twitter.com/${TWITTER_USERNAME}`}>
           <Icon name="mdi:twitter" />
           <span>Twitter</span>
+        </a>
+      </li>
+      <li>
+        <a href={`https://github.com/${GITHUB_USERNAME}`}>
+          <Icon name="mdi:github" />
+          <span>GitHub</span>
         </a>
       </li>
     </ul>
@@ -141,15 +155,15 @@ import {
 
     ul {
       flex-direction: row;
-      gap: var(--spacing-lg);
-      margin-right: var(--spacing-lg);
+      gap: var(--spacing-xl);
+      margin-right: var(--spacing-xl);
     }
 
     li svg {
       display: block;
     }
 
-    span {
+    span:not(.show) {
       display: none;
     }
 
