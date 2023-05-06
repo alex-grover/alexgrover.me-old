@@ -1,11 +1,11 @@
 ---
+import Icon from 'astro-icon'
 import Button from 'components/Button.astro'
-import NavIcon from 'components/NavIcon.astro'
 ---
 
 <Button type="button" aria-label="toggle theme">
-  <NavIcon name="sun" data-theme-toggle="light" />
-  <NavIcon name="moon" data-theme-toggle="dark" />
+  <Icon name="heroicons-outline:sun" data-theme-toggle="light" />
+  <Icon name="heroicons-outline:moon" data-theme-toggle="dark" />
 </Button>
 
 <script>
@@ -31,6 +31,13 @@ import NavIcon from 'components/NavIcon.astro'
     .querySelector("[data-theme-toggle='light']")
     ?.addEventListener('click', setLightTheme)
 </script>
+
+<style>
+  svg {
+    height: var(--fs-lg);
+    color: var(--c-text);
+  }
+</style>
 
 <style is:global>
   [data-theme-toggle='dark'],
