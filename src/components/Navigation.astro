@@ -1,7 +1,11 @@
 ---
 import Icon from 'astro-icon'
 import Button from 'components/Button.astro'
-import { NAV_LINKS } from 'links'
+import {
+  INSTAGRAM_USERNAME,
+  READ_CV_USERNAME,
+  TWITTER_USERNAME,
+} from '../constants'
 ---
 
 <nav>
@@ -11,13 +15,21 @@ import { NAV_LINKS } from 'links'
 
   <div data-nav-menu>
     <ul>
-      {
-        NAV_LINKS.map(({ title, href }) => (
-          <li>
-            <a href={href}>{title}</a>
-          </li>
-        ))
-      }
+      <li>
+        <a href={`https://read.cv/${READ_CV_USERNAME}`}>Work</a>
+      </li>
+      <li>
+        <a href={`https://www.instagram.com/${INSTAGRAM_USERNAME}/`}>
+          <Icon name="mdi:instagram" />
+          <span>Instagram</span>
+        </a>
+      </li>
+      <li>
+        <a href={`https://twitter.com/${TWITTER_USERNAME}`}>
+          <Icon name="mdi:twitter" />
+          <span>Twitter</span>
+        </a>
+      </li>
     </ul>
     <Button type="button" aria-label="close menu" data-nav-toggle>
       <Icon name="heroicons-outline:x" />
@@ -45,7 +57,7 @@ import { NAV_LINKS } from 'links'
 
 <style>
   svg {
-    height: var(--fs-lg);
+    height: var(--fs-md);
     color: var(--c-text);
   }
 
@@ -79,6 +91,7 @@ import { NAV_LINKS } from 'links'
   ul {
     display: flex;
     flex-direction: column;
+    gap: var(--spacing-md);
     justify-content: space-between;
     padding: 0;
     margin: 0;
@@ -88,23 +101,19 @@ import { NAV_LINKS } from 'links'
   li {
     display: flex;
     flex-grow: 1;
-    align-items: center;
-    margin-bottom: var(--spacing-md);
-  }
-
-  li:last-of-type {
-    margin-bottom: 0;
+    align-items: end;
   }
 
   a {
     display: flex;
     align-items: center;
+    line-height: 1;
     color: var(--c-text);
     text-decoration: none;
   }
 
-  a:hover {
-    color: var(--c-link);
+  li svg {
+    display: none;
   }
 
   .open {
@@ -132,10 +141,16 @@ import { NAV_LINKS } from 'links'
 
     ul {
       flex-direction: row;
+      gap: var(--spacing-lg);
+      margin-right: var(--spacing-lg);
     }
 
-    li {
-      margin: 0 var(--spacing-lg) 0 0;
+    li svg {
+      display: block;
+    }
+
+    span {
+      display: none;
     }
 
     [data-nav-toggle] {

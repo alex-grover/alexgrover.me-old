@@ -17,21 +17,19 @@ interface Section {
   links: Link[]
 }
 
-export const NAV_LINKS: Link[] = [
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Work',
-    href: `https://read.cv/${READ_CV_USERNAME}`,
-  },
-]
-
 const LINK_SECTIONS: Section[] = [
   {
     title: 'Links',
-    links: NAV_LINKS,
+    links: [
+      {
+        title: 'Home',
+        href: '/',
+      },
+      {
+        title: 'Work',
+        href: `https://read.cv/${READ_CV_USERNAME}`,
+      },
+    ],
   },
   {
     title: 'Connect',
