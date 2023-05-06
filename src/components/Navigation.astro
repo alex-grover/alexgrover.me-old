@@ -1,12 +1,12 @@
 ---
+import Icon from 'astro-icon'
 import Button from 'components/Button.astro'
-import NavIcon from 'components/NavIcon.astro'
 import { NAV_LINKS } from 'links'
 ---
 
 <nav>
   <Button type="button" class="open" aria-label="open menu" data-nav-toggle>
-    <NavIcon name="menu" />
+    <Icon name="heroicons-outline:menu" />
   </Button>
 
   <div data-nav-menu>
@@ -20,7 +20,7 @@ import { NAV_LINKS } from 'links'
       }
     </ul>
     <Button type="button" aria-label="close menu" data-nav-toggle>
-      <NavIcon name="x" />
+      <Icon name="heroicons-outline:x" />
     </Button>
   </div>
 </nav>
@@ -44,6 +44,11 @@ import { NAV_LINKS } from 'links'
 </script>
 
 <style>
+  svg {
+    height: var(--fs-lg);
+    color: var(--c-text);
+  }
+
   div {
     position: absolute;
     top: var(--spacing-md);
