@@ -7,14 +7,14 @@ import { DESCRIPTION, NAME, SEPARATOR, TAGLINE } from '../constants'
 const parser = new MarkdownIt()
 
 export async function get() {
-  const blog = await getCollection('blog')
+  const posts = await getCollection('writing')
 
   return rss({
     title: `${NAME}${SEPARATOR}${TAGLINE}`,
     description: DESCRIPTION,
     site: import.meta.env.SITE,
-    items: blog.map((post) => ({
-      link: `/posts/${post.slug}`,
+    items: posts.map((post) => ({
+      link: `/writing/${post.slug}`,
       content: sanitizeHtml(parser.render(post.body)),
       ...post.data,
     })),
