@@ -20,7 +20,7 @@ export type Props = DocumentProps
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 900px; /* --tablet-landscape-up */
+    max-width: 800px; /* --tablet-landscape-up */
     min-height: 100vh;
     padding: 0 var(--spacing-md);
     margin: 0 auto;
@@ -32,7 +32,7 @@ export type Props = DocumentProps
 
   @media (--tablet-landscape-up) {
     div {
-      padding: 0;
+      padding: 0 var(--spacing-lg);
     }
   }
 </style>
