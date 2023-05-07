@@ -10,7 +10,7 @@ export async function get() {
   const posts = await getCollection('writing')
 
   return rss({
-    title: `${NAME}${SEPARATOR}${TAGLINE}`,
+    title: `${NAME} ${SEPARATOR} ${TAGLINE}`,
     description: DESCRIPTION,
     site: import.meta.env.SITE,
     items: posts.map((post) => ({

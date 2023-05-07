@@ -10,8 +10,14 @@ import {
 } from '../constants'
 ---
 
-<nav>
-  <Button type="button" class="open" aria-label="open menu" data-nav-toggle>
+<nav data-testid="nav">
+  <Button
+    type="button"
+    class="open"
+    aria-label="open menu"
+    data-nav-toggle
+    data-testid="nav-open"
+  >
     <Icon name="heroicons-outline:menu" />
   </Button>
 
@@ -48,7 +54,12 @@ import {
         </a>
       </li>
     </ul>
-    <Button type="button" aria-label="close menu" data-nav-toggle>
+    <Button
+      type="button"
+      aria-label="close menu"
+      data-nav-toggle
+      data-testid="nav-close"
+    >
       <Icon name="heroicons-outline:x" />
     </Button>
   </div>
