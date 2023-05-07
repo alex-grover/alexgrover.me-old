@@ -26,8 +26,8 @@ const { Content } = await entry.render()
   title={entry.data.title}
   article={{ publishedTime: entry.data.pubDate.toISOString() }}
 >
-  <h1>{entry.data.title}</h1>
-  <article>
+  <h1 data-testid="title">{entry.data.title}</h1>
+  <article data-testid="content">
     <Content />
   </article>
 </Layout>

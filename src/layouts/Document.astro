@@ -17,9 +17,10 @@ export interface Props {
 
 const { article, title } = Astro.props
 
+const fullTitle = `${NAME} ${SEPARATOR} ${title ?? TAGLINE}`
 const openGraph: SEOProps['openGraph'] = {
   basic: {
-    title: `${title ?? TAGLINE} ${SEPARATOR} ${Astro.url.hostname}`,
+    title: fullTitle,
     type: article ? 'article' : 'website',
     image: '/og.png',
   },
@@ -55,11 +56,11 @@ if (article) openGraph.article = article
     <link rel="sitemap" href="/sitemap-index.xml" />
     <Themes />
     <SEO
-      title={`${NAME} ${SEPARATOR} ${title ?? TAGLINE}`}
+      title={fullTitle}
       description={DESCRIPTION}
       openGraph={openGraph}
       twitter={{
-        card: 'summary',
+        card: 'summary_large_image',
         creator: `@${TWITTER_USERNAME}`,
         site: `@${TWITTER_USERNAME}`,
       }}

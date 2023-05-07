@@ -41,6 +41,7 @@ const config: PlaywrightTestConfig = {
     : {
         command: 'npm run build && npm run start',
         port: 3000,
+        reuseExistingServer: true,
       },
 }
 
