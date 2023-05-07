@@ -1,0 +1,21 @@
+---
+interface Props {
+  class: string
+}
+
+const { class: className } = Astro.props
+---
+
+<img src="/profile.webp" alt="Profile picture" class={className} />
+
+<style>
+  img {
+    --size: 220px;
+
+    width: var(--size);
+    height: var(--size);
+    margin: var(--s-lg) 0;
+    border-radius: var(--r-full);
+    object-fit: cover;
+  }
+</style>

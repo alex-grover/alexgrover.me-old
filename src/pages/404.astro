@@ -38,12 +38,12 @@ import Layout from 'layouts/Layout.astro'
   }
 
   a:hover {
-    filter: brightness(115%);
+    filter: brightness(var(--brightness));
   }
 
   svg {
     height: 1rem;
-    margin-left: var(--spacing-sm);
+    margin-left: var(--s-sm);
   }
 
   @media (--tablet-portrait-up) {
