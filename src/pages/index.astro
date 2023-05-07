@@ -1,5 +1,119 @@
 ---
+import ProfileImage from 'components/ProfileImage.astro'
 import Layout from 'layouts/Layout.astro'
+import {
+  EMAIL,
+  GITHUB_LINK,
+  GITHUB_USERNAME,
+  INSTAGRAM_LINK,
+  INSTAGRAM_USERNAME,
+  TWITTER_LINK,
+  TWITTER_USERNAME,
+} from '../constants'
 ---
 
-<Layout>Home</Layout>
+<Layout>
+  <div class="container about">
+    <ProfileImage class="image" />
+    <div>
+      <p>
+        Hey, I'm Alex. I'm a software engineer and photographer. I'm currently
+        working on <a href="https://www.homage.xyz" target="_blank">Homage</a>.
+        We are on a mission to make the most expensive NFT art more accessible.
+      </p>
+      <p>
+        Before Homage, led the Platform team at <a
+          href="https://www.darwinhomes.com"
+          target="_blank">Darwin Homes</a
+        >, where I joined as an early engineer. Darwin was acquired by <a
+          href="https://pagaya.com"
+          target="_blank">Pagaya</a
+        > in January 2023.
+      </p>
+      <p>
+        Before Darwin, I spent time traveling in Southeast Asia, freelancing and
+        honing my creative skills as a photographer.
+      </p>
+      <p>
+        I studied Computer Science at Stanford, and started my career as the
+        13th engineer at <a href="https://www.doordash.com" target="_blank"
+          >DoorDash</a
+        >, where I helped start the Merchant, Payments, and Drive (b2b white
+        label delivery) teams.
+      </p>
+      <p>
+        When I'm not drinking coffee and building websites, you can find me
+        outside, traveling, taking photos, and looking for a new adventure.
+      </p>
+    </div>
+  </div>
+  <div class="container contact">
+    <h2>Connect</h2>
+    <div class="row">
+      <span class="label">Email</span>
+      <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+    </div>
+    <div class="row">
+      <span class="label">Instagram</span>
+      <a href={INSTAGRAM_LINK} target="_blank">@{INSTAGRAM_USERNAME}</a>
+    </div>
+    <div class="row">
+      <span class="label">Twitter</span>
+      <a href={TWITTER_LINK} target="_blank">@{TWITTER_USERNAME}</a>
+    </div>
+    <div class="row">
+      <span class="label">GitHub</span>
+      <a href={GITHUB_LINK} target="_blank">@{GITHUB_USERNAME}</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about {
+    align-items: center;
+    margin-top: var(--s-xl);
+  }
+
+  .image {
+    margin: 0 auto var(--s-xl) auto;
+  }
+
+  a {
+    color: var(--c-link);
+  }
+
+  a:hover {
+    filter: brightness(var(--brightness));
+  }
+
+  .row {
+    display: flex;
+    margin-bottom: var(--s-md);
+  }
+
+  .label {
+    display: inline-block;
+    flex-grow: 1;
+    min-width: 150px;
+    color: var(--c-text-light);
+  }
+
+  @media (--tablet-portrait-up) {
+    .about {
+      flex-direction: row;
+    }
+
+    .image {
+      margin: 0 var(--s-xxl) 0 0;
+    }
+
+    .label {
+      flex-grow: 0;
+    }
+  }
+</style>

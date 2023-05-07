@@ -22,7 +22,8 @@ export type Props = DocumentProps
     width: 100%;
     max-width: 800px; /* --tablet-landscape-up */
     min-height: 100vh;
-    padding: 0 var(--spacing-md);
+    padding: var(--s-md);
+    padding-top: 0;
     margin: 0 auto;
   }
 
@@ -32,7 +33,7 @@ export type Props = DocumentProps
 
   @media (--tablet-landscape-up) {
     div {
-      padding: 0 var(--spacing-lg);
+      padding: 0 var(--s-lg);
     }
   }
 </style>

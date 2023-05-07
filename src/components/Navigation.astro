@@ -2,11 +2,11 @@
 import Icon from 'astro-icon'
 import Button from 'components/Button.astro'
 import {
-  FOUNDATION_USERNAME,
-  GITHUB_USERNAME,
-  INSTAGRAM_USERNAME,
+  FOUNDATION_LINK,
+  GITHUB_LINK,
+  INSTAGRAM_LINK,
   READ_CV_USERNAME,
-  TWITTER_USERNAME,
+  TWITTER_LINK,
 } from '../constants'
 ---
 
@@ -21,28 +21,28 @@ import {
         <a href="/writing">Writing</a>
       </li>
       <li>
-        <a href={`https://read.cv/${READ_CV_USERNAME}`}>Work</a>
+        <a href={`https://read.cv/${READ_CV_USERNAME}`} target="_blank">Work</a>
       </li>
       <li>
-        <a href={`https://foundation.app/${FOUNDATION_USERNAME}`}>
+        <a href={FOUNDATION_LINK} target="_blank">
           <span>Foundation&nbsp;</span>
           <span class="show">NFTs</span>
         </a>
       </li>
       <li>
-        <a href={`https://www.instagram.com/${INSTAGRAM_USERNAME}/`}>
+        <a href={INSTAGRAM_LINK} target="_blank">
           <Icon name="mdi:instagram" />
           <span>Instagram</span>
         </a>
       </li>
       <li>
-        <a href={`https://twitter.com/${TWITTER_USERNAME}`}>
+        <a href={TWITTER_LINK} target="_blank">
           <Icon name="mdi:twitter" />
           <span>Twitter</span>
         </a>
       </li>
       <li>
-        <a href={`https://github.com/${GITHUB_USERNAME}`}>
+        <a href={GITHUB_LINK} target="_blank">
           <Icon name="mdi:github" />
           <span>GitHub</span>
         </a>
@@ -80,13 +80,13 @@ import {
 
   div {
     position: absolute;
-    top: var(--spacing-md);
+    top: var(--s-md);
     right: 0;
     left: 0;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: var(--spacing-md);
+    padding: var(--s-md);
     pointer-events: none;
     background: var(--c-bg);
     border-radius: var(--r);
@@ -108,7 +108,7 @@ import {
   ul {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: var(--s-md);
     justify-content: space-between;
     padding: 0;
     margin: 0;
@@ -134,7 +134,7 @@ import {
   }
 
   .open {
-    margin-right: var(--spacing-lg);
+    margin-right: var(--s-lg);
   }
 
   @media (--tablet-portrait-up) {
@@ -158,8 +158,8 @@ import {
 
     ul {
       flex-direction: row;
-      gap: var(--spacing-xl);
-      margin-right: var(--spacing-xl);
+      gap: var(--s-xl);
+      margin-right: var(--s-xl);
     }
 
     li svg {

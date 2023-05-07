@@ -1,5 +1,6 @@
 ---
 import Icon from 'astro-icon'
+import ProfileImage from 'components/ProfileImage.astro'
 import ThemeToggle from 'components/ThemeToggle.astro'
 import Document from 'layouts/Document.astro'
 import {
@@ -16,7 +17,7 @@ import {
       <ThemeToggle />
     </div>
     <div class="name">{NAME}</div>
-    <img src="/profile.webp" alt="Alex Grover's profile picture" />
+    <ProfileImage class="image" />
     <ul>
       <li>
         <a href="/">
@@ -54,7 +55,7 @@ import {
     width: 100%;
     max-width: 500px;
     min-height: 100vh;
-    padding: var(--spacing-xl);
+    padding: var(--s-xl);
     margin: 0 auto;
   }
 
@@ -69,14 +70,9 @@ import {
     font-weight: bold;
   }
 
-  img {
-    --size: 220px;
-
-    width: var(--size);
-    height: var(--size);
-    margin: var(--spacing-lg) auto;
-    border-radius: var(--r-full);
-    object-fit: cover;
+  .image {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   ul {
@@ -89,7 +85,7 @@ import {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--spacing-lg) 0;
+    padding: var(--s-lg) 0;
     color: var(--c-text);
     text-decoration: none;
     border-bottom: 1px solid var(--c-border);
