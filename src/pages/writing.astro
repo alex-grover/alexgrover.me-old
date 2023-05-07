@@ -6,14 +6,14 @@ const posts = await getCollection('writing', ({ data }) => data.draft !== true)
 ---
 
 <Layout>
-  <h2>Writing</h2>
+  <h1>Writing</h1>
   <ul>
     {
       posts.map((entry) => (
         <li>
-          <h3>
+          <h2>
             <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
-          </h3>
+          </h2>
           <p>{entry.data.description}</p>
           <time datetime={entry.data.pubDate.toDateString()}>
             {entry.data.pubDate.toLocaleDateString()}
@@ -25,17 +25,32 @@ const posts = await getCollection('writing', ({ data }) => data.draft !== true)
 </Layout>
 
 <style>
+  h1 {
+    margin: var(--spacing-xl) 0;
+    font-size: var(--fs-lg);
+  }
+
   ul {
     padding: 0;
     list-style: none;
   }
 
+  h2 {
+    margin: var(--spacing-sm) 0;
+    font-size: var(--fs-md);
+  }
+
   a {
     color: var(--c-text);
+    text-decoration: none;
   }
 
   a:hover {
     color: var(--c-link);
+  }
+
+  p {
+    margin: var(--spacing-sm) 0;
   }
 
   time {
