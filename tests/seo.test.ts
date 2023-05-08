@@ -19,5 +19,5 @@ test('seo', async ({ page }) => {
 
   const ogImageElement = await page.locator('meta[property="og:image"]')
   const ogImage = await ogImageElement.getAttribute('content')
-  await expect(ogImage).toEqual('/og.png')
+  await expect(ogImage).toEqual('https://alexgrover.me/og.png')
 })
