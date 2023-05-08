@@ -22,7 +22,7 @@ const openGraph: SEOProps['openGraph'] = {
   basic: {
     title: fullTitle,
     type: article ? 'article' : 'website',
-    image: '/og.png',
+    image: `${Astro.url.origin}/og.png`,
   },
   image: {
     alt: `${NAME}'s logo`,
