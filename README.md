@@ -7,7 +7,7 @@ Technologies in use:
 - [TypeScript](https://www.typescriptlang.org)
 - [Astro](https://astro.build)
 - Markdown for content
-- Vanilla CSS, CSS Modules, CSS variables
+- Vanilla CSS + CSS variables
 - [astro-themes](https://github.com/alex-grover/astro-themes) for dark mode
 - [postcss-custom-media](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media) to use the Stage 2 CSS feature and consolidate media queries
 - [Prettier](https://prettier.io), [Stylelint](https://stylelint.io), [lint-staged](https://github.com/okonet/lint-staged), and [husky](https://typicode.github.io/husky/#/) for linting and formatting
