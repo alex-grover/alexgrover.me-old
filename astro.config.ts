@@ -20,8 +20,6 @@ export default defineConfig({
   }),
   build: {
     format: 'file',
-  },
-  experimental: {
     inlineStylesheets: 'auto',
   },
 })
