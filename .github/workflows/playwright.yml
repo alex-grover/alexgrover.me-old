@@ -4,7 +4,7 @@ on: deployment_status
 
 jobs:
   test:
-    if: github.event.deployment_status.state == 'success'
+    if: github.event.deployment_status.state == 'success' && github.event.deployment_status.environment != 'production'
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
