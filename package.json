@@ -42,7 +42,7 @@
     "postcss-html": "^1.5.0",
     "prettier": "^2.8.8",
     "prettier-plugin-astro": "^0.10.0",
-    "sanitize-html": "^2.10.0",
+    "sanitize-html": "^2.11.0",
     "stylelint": "^15.9.0",
     "stylelint-config-astro": "^1.0.4",
     "stylelint-config-css-modules": "^4.2.0",
