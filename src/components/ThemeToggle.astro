@@ -1,11 +1,12 @@
 ---
-import Icon from 'astro-icon'
 import Button from 'components/Button.astro'
+import Sun from 'components/icons/Sun.astro'
+import Moon from 'components/icons/Moon.astro'
 ---
 
 <Button type="button" aria-label="toggle theme">
-  <Icon name="heroicons-outline:sun" data-theme-toggle="light" />
-  <Icon name="heroicons-outline:moon" data-theme-toggle="dark" />
+  <Sun data-theme-toggle="light" />
+  <Moon data-theme-toggle="dark" />
 </Button>
 
 <script>

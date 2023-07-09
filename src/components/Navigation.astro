@@ -1,6 +1,10 @@
 ---
-import Icon from 'astro-icon'
 import Button from 'components/Button.astro'
+import Close from 'components/icons/Close.astro'
+import Github from 'components/icons/Github.astro'
+import Instagram from 'components/icons/Instagram.astro'
+import Menu from 'components/icons/Menu.astro'
+import Twitter from 'components/icons/Twitter.astro'
 import {
   FOUNDATION_LINK,
   GITHUB_LINK,
@@ -18,7 +22,7 @@ import {
     data-nav-toggle
     data-testid="nav-open"
   >
-    <Icon name="heroicons-outline:menu" />
+    <Menu />
   </Button>
 
   <div data-nav-menu>
@@ -37,19 +41,19 @@ import {
       </li>
       <li>
         <a href={INSTAGRAM_LINK} target="_blank">
-          <Icon name="mdi:instagram" />
+          <Instagram />
           <span>Instagram</span>
         </a>
       </li>
       <li>
         <a href={TWITTER_LINK} target="_blank">
-          <Icon name="mdi:twitter" />
+          <Twitter />
           <span>Twitter</span>
         </a>
       </li>
       <li>
         <a href={GITHUB_LINK} target="_blank">
-          <Icon name="mdi:github" />
+          <Github />
           <span>GitHub</span>
         </a>
       </li>
@@ -60,7 +64,7 @@ import {
       data-nav-toggle
       data-testid="nav-close"
     >
-      <Icon name="heroicons-outline:x" />
+      <Close />
     </Button>
   </div>
 </nav>
