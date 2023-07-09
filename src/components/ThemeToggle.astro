@@ -10,6 +10,7 @@ import Button from 'components/Button.astro'
 
 <script>
   import type { Theme } from 'astro-themes'
+  import { updateThemeColor } from 'theme'
 
   function setTheme(theme: Theme) {
     document.dispatchEvent(new CustomEvent('set-theme', { detail: theme }))
@@ -17,10 +18,12 @@ import Button from 'components/Button.astro'
 
   function setDarkTheme() {
     setTheme('dark')
+    updateThemeColor()
   }
 
   function setLightTheme() {
     setTheme('light')
+    updateThemeColor()
   }
 
   document
