@@ -1,6 +1,6 @@
 export function updateThemeColor() {
   const backgroundColor = getComputedStyle(
-    document.documentElement
+    document.documentElement,
   ).getPropertyValue('--c-bg')
   document
     .querySelector('meta[name=theme-color]')
