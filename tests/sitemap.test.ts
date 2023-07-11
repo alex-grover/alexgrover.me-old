@@ -7,6 +7,6 @@ test('sitemap', async ({ page }) => {
 
   await expect(page.locator('link[rel="sitemap"]')).toHaveAttribute(
     'href',
-    '/sitemap-index.xml'
+    '/sitemap-index.xml',
   )
 })
