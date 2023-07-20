@@ -1,17 +1,11 @@
 ---
-import Camera from 'components/icons/Camera.astro'
 import Computer from 'components/icons/Computer.astro'
 import Instagram from 'components/icons/Instagram.astro'
 import Twitter from 'components/icons/Twitter.astro'
 import ProfileImage from 'components/ProfileImage.astro'
 import ThemeToggle from 'components/ThemeToggle.astro'
 import Document from 'layouts/Document.astro'
-import {
-  FOUNDATION_USERNAME,
-  INSTAGRAM_USERNAME,
-  NAME,
-  TWITTER_USERNAME,
-} from '../constants'
+import { INSTAGRAM_USERNAME, NAME, TWITTER_USERNAME } from '../constants'
 ---
 
 <Document title="Links">
@@ -38,12 +32,6 @@ import {
         <a href={`https://twitter.com/${TWITTER_USERNAME}`}>
           <span>Twitter</span>
           <Twitter />
-        </a>
-      </li>
-      <li>
-        <a href={`https://foundation.app/${FOUNDATION_USERNAME}`}>
-          <span>Foundation NFTs</span>
-          <Camera />
         </a>
       </li>
     </ul>
