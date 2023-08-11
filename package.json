@@ -23,7 +23,7 @@
     "@astrojs/rss": "^2.4.4",
     "@astrojs/sitemap": "^2.0.1",
     "@astrojs/vercel": "^3.7.4",
-    "astro": "^2.10.4",
+    "astro": "^2.10.7",
     "astro-compress": "^2.0.4",
     "astro-seo": "^0.7.5",
     "astro-themes": "^0.2.4",
