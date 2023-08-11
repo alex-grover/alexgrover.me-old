@@ -7,5 +7,7 @@ updates:
       interval: weekly
     reviewers:
       - alex-grover
-    ignore:
-      - dependency-name: postcss-custom-media
+    groups:
+      dependencies:
+        patterns:
+          - '*'
