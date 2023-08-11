@@ -22,9 +22,9 @@
   "dependencies": {
     "@astrojs/rss": "^2.4.4",
     "@astrojs/sitemap": "^2.0.1",
-    "@astrojs/vercel": "^3.7.4",
+    "@astrojs/vercel": "^3.8.1",
     "astro": "^2.10.4",
-    "astro-compress": "^2.0.4",
+    "astro-compress": "^2.0.5",
     "astro-seo": "^0.7.5",
     "astro-themes": "^0.2.4",
     "markdown-it": "^13.0.1",
@@ -32,8 +32,8 @@
   },
   "devDependencies": {
     "@csstools/postcss-global-data": "^2.0.1",
-    "@playwright/test": "^1.36.2",
-    "@types/markdown-it": "^12.2.3",
+    "@playwright/test": "^1.37.0",
+    "@types/markdown-it": "^13.0.0",
     "@types/sanitize-html": "^2.9.0",
     "husky": "^8.0.3",
     "is-ci": "^3.0.1",
