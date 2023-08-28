@@ -23,17 +23,17 @@
     "@astrojs/rss": "^2.4.4",
     "@astrojs/sitemap": "^2.0.2",
     "@astrojs/vercel": "^3.8.2",
-    "astro": "^2.10.4",
+    "astro": "^2.10.14",
     "astro-compress": "^2.0.14",
-    "astro-seo": "^0.7.6",
+    "astro-seo": "^0.8.0",
     "astro-themes": "^0.2.4",
     "markdown-it": "^13.0.1",
     "sanitize-html": "^2.11.0"
   },
   "devDependencies": {
-    "@csstools/postcss-global-data": "^2.0.1",
+    "@csstools/postcss-global-data": "^2.1.0",
     "@playwright/test": "^1.37.1",
-    "@types/markdown-it": "^13.0.0",
+    "@types/markdown-it": "^13.0.1",
     "@types/sanitize-html": "^2.9.0",
     "husky": "^8.0.3",
     "is-ci": "^3.0.1",
@@ -43,13 +43,13 @@
     "postcss-custom-media": "^10.0.0",
     "postcss-html": "^1.5.0",
     "prettier": "^3.0.2",
-    "prettier-plugin-astro": "^0.11.1",
+    "prettier-plugin-astro": "^0.12.0",
     "stylelint": "^15.10.3",
     "stylelint-config-astro": "^1.0.4",
     "stylelint-config-css-modules": "^4.3.0",
     "stylelint-config-recess-order": "^4.3.0",
     "stylelint-config-standard": "^34.0.0",
-    "vercel": "^32.0.0"
+    "vercel": "^32.1.0"
   },
   "prettier": {
     "semi": false,
