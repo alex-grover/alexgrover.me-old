@@ -1,25 +1,14 @@
----
-interface Props {
-  class: string
-}
-
-const { class: className } = Astro.props
----
-
-<div class={className}>
-  <img src="/profile.webp" alt="Profile picture" />
-</div>
+<img src="/profile.webp" alt="Profile picture" />
 
 <style>
   div {
-    --size: 220px;
-
     width: var(--size);
     height: var(--size);
-    margin: var(--s-lg) 0;
   }
 
   img {
+    --size: 220px;
+
     width: var(--size);
     height: var(--size);
     border-radius: var(--r-full);

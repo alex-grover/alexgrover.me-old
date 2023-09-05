@@ -14,7 +14,9 @@ import { INSTAGRAM_USERNAME, NAME, TWITTER_USERNAME } from '../constants'
       <ThemeToggle />
     </div>
     <div class="name">{NAME}</div>
-    <ProfileImage class="image" />
+    <div class="image">
+      <ProfileImage />
+    </div>
     <ul>
       <li>
         <a href="/">
@@ -62,8 +64,7 @@ import { INSTAGRAM_USERNAME, NAME, TWITTER_USERNAME } from '../constants'
   }
 
   .image {
-    margin-right: auto;
-    margin-left: auto;
+    margin: var(--s-lg) auto;
   }
 
   ul {
