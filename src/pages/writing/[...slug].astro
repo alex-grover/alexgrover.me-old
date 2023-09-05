@@ -1,5 +1,5 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content'
+import { type CollectionEntry, getCollection } from 'astro:content'
 import Layout from 'layouts/Layout.astro'
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
 export async function getStaticPaths() {
   const posts = await getCollection(
     'writing',
-    ({ data }) => data.draft !== true
+    ({ data }) => data.draft !== true,
   )
 
   return posts.map((entry) => ({

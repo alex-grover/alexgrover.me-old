@@ -22,7 +22,6 @@ Technologies in use:
 - Install Node.js
 - `gh repo clone alex-grover/alexgrover.me`
 - `npm install`
-- `npx vercel env pull`
 - `npm run dev`
 
 ### To Customize
