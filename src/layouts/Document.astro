@@ -1,5 +1,5 @@
 ---
-import { SEO, Props as SEOProps } from 'astro-seo'
+import { SEO, type Props as SEOProps } from 'astro-seo'
 import Themes from 'astro-themes'
 
 import {
@@ -34,7 +34,7 @@ const openGraph: SEOProps['openGraph'] = {
 if (article) openGraph.article = article
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
