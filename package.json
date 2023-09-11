@@ -22,7 +22,7 @@
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/vercel": "^4.0.3",
+    "@astrojs/vercel": "^4.0.5",
     "astro": "^3.0.8",
     "astro-compress": "^2.0.15",
     "astro-seo": "^0.8.0",
