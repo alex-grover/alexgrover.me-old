@@ -26,7 +26,12 @@ export default defineConfig({
   },
   output: 'static',
   adapter: vercel({
-    analytics: true,
+    webAnalytics: {
+      enabled: true,
+    },
+    speedInsights: {
+      enabled: true,
+    },
   }),
   build: {
     format: 'file',
