@@ -27,6 +27,7 @@
     "astro-compress": "^2.0.15",
     "astro-seo": "^0.8.0",
     "astro-themes": "^0.2.4",
+    "lucide-static": "^0.279.0",
     "markdown-it": "^13.0.1",
     "sanitize-html": "^2.11.0"
   },

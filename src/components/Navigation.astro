@@ -34,19 +34,25 @@ import {
       </li>
       <li>
         <a href={INSTAGRAM_LINK} target="_blank">
-          <Instagram />
+          <span class="icon">
+            <Instagram />
+          </span>
           <span>Instagram</span>
         </a>
       </li>
       <li>
         <a href={TWITTER_LINK} target="_blank">
-          <Twitter />
+          <span class="icon">
+            <Twitter />
+          </span>
           <span>Twitter</span>
         </a>
       </li>
       <li>
         <a href={GITHUB_LINK} target="_blank">
-          <Github />
+          <span class="icon">
+            <Github />
+          </span>
           <span>GitHub</span>
         </a>
       </li>
@@ -137,7 +143,7 @@ import {
     text-decoration: none;
   }
 
-  li svg {
+  .icon {
     display: none;
   }
 
@@ -170,11 +176,11 @@ import {
       margin-right: var(--s-xl);
     }
 
-    li svg {
+    .icon {
       display: block;
     }
 
-    span:not(.show) {
+    span:not(.icon) {
       display: none;
     }
 
