@@ -13,7 +13,7 @@ const config: PlaywrightTestConfig = {
   reporter: process.env.CI ? 'github' : 'list',
   use: {
     actionTimeout: 0,
-    baseURL: process.env.PLAYWRIGHT_BASE_URL ?? 'http://localhost:3000',
+    baseURL: process.env.PLAYWRIGHT_BASE_URL ?? 'http://localhost:4321',
     trace: 'on-first-retry',
   },
   projects: [
@@ -40,7 +40,7 @@ const config: PlaywrightTestConfig = {
     ? []
     : {
         command: 'npm run build && npm run start',
-        port: 3000,
+        port: 4321,
         reuseExistingServer: true,
       },
 }
