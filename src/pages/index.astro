@@ -3,6 +3,8 @@ import ProfileImage from 'components/ProfileImage.astro'
 import Layout from 'layouts/Layout.astro'
 import {
   EMAIL,
+  ENS_NAME,
+  FARCASTER_LINK,
   GITHUB_LINK,
   GITHUB_USERNAME,
   INSTAGRAM_LINK,
@@ -60,12 +62,16 @@ import {
       <a href={INSTAGRAM_LINK} target="_blank">@{INSTAGRAM_USERNAME}</a>
     </div>
     <div class="row">
-      <span class="label">Twitter</span>
-      <a href={TWITTER_LINK} target="_blank">@{TWITTER_USERNAME}</a>
+      <span class="label">Farcaster</span>
+      <a href={FARCASTER_LINK} target="_blank">@{ENS_NAME}</a>
     </div>
     <div class="row">
       <span class="label">GitHub</span>
       <a href={GITHUB_LINK} target="_blank">@{GITHUB_USERNAME}</a>
+    </div>
+    <div class="row">
+      <span class="label">Twitter</span>
+      <a href={TWITTER_LINK} target="_blank">@{TWITTER_USERNAME}</a>
     </div>
   </div>
 </Layout>

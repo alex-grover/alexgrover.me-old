@@ -6,10 +6,12 @@ export const DESCRIPTION = `${NAME}'s personal website.`
 
 export const EMAIL = 'hello@alexgrover.me'
 export const GITHUB_USERNAME = 'alex-grover'
+export const ENS_NAME = 'alexgrover.eth'
 export const INSTAGRAM_USERNAME = 'alex__grover'
 export const READ_CV_USERNAME = 'alexgrover'
 export const TWITTER_USERNAME = 'alexgrover_eth'
 
 export const GITHUB_LINK = `https://github.com/${GITHUB_USERNAME}`
 export const INSTAGRAM_LINK = `https://www.instagram.com/${INSTAGRAM_USERNAME}/`
+export const FARCASTER_LINK = `https://warpcast.com/${ENS_NAME}`
 export const TWITTER_LINK = `https://twitter.com/${TWITTER_USERNAME}`

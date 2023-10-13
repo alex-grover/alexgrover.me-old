@@ -1,11 +1,13 @@
 ---
 import Button from 'components/Button.astro'
 import Close from 'components/icons/Close.astro'
+import Farcaster from 'components/icons/Farcaster.astro'
 import Github from 'components/icons/Github.astro'
 import Instagram from 'components/icons/Instagram.astro'
 import Menu from 'components/icons/Menu.astro'
 import Twitter from 'components/icons/Twitter.astro'
 import {
+  FARCASTER_LINK,
   GITHUB_LINK,
   INSTAGRAM_LINK,
   READ_CV_USERNAME,
@@ -41,11 +43,11 @@ import {
         </a>
       </li>
       <li>
-        <a href={TWITTER_LINK} target="_blank">
+        <a href={FARCASTER_LINK} target="_blank">
           <span class="icon">
-            <Twitter />
+            <Farcaster />
           </span>
-          <span>Twitter</span>
+          <span>Farcaster</span>
         </a>
       </li>
       <li>
@@ -54,6 +56,14 @@ import {
             <Github />
           </span>
           <span>GitHub</span>
+        </a>
+      </li>
+      <li>
+        <a href={TWITTER_LINK} target="_blank">
+          <span class="icon">
+            <Twitter />
+          </span>
+          <span>Twitter</span>
         </a>
       </li>
     </ul>

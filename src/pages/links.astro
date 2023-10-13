@@ -1,11 +1,19 @@
 ---
 import Computer from 'components/icons/Computer.astro'
+import Farcaster from 'components/icons/Farcaster.astro'
+import Github from 'components/icons/Github.astro'
 import Instagram from 'components/icons/Instagram.astro'
 import Twitter from 'components/icons/Twitter.astro'
 import ProfileImage from 'components/ProfileImage.astro'
 import ThemeToggle from 'components/ThemeToggle.astro'
 import Document from 'layouts/Document.astro'
-import { INSTAGRAM_USERNAME, NAME, TWITTER_USERNAME } from '../constants'
+import {
+  FARCASTER_LINK,
+  GITHUB_LINK,
+  INSTAGRAM_LINK,
+  NAME,
+  TWITTER_LINK,
+} from '../constants'
 ---
 
 <Document title="Links">
@@ -25,13 +33,25 @@ import { INSTAGRAM_USERNAME, NAME, TWITTER_USERNAME } from '../constants'
         </a>
       </li>
       <li>
-        <a href={`https://www.instagram.com/${INSTAGRAM_USERNAME}/`}>
+        <a href={INSTAGRAM_LINK}>
           <span>Instagram</span>
           <Instagram />
         </a>
       </li>
       <li>
-        <a href={`https://twitter.com/${TWITTER_USERNAME}`}>
+        <a href={FARCASTER_LINK}>
+          <span>Farcaster</span>
+          <Farcaster />
+        </a>
+      </li>
+      <li>
+        <a href={GITHUB_LINK}>
+          <span>Github</span>
+          <Github />
+        </a>
+      </li>
+      <li>
+        <a href={TWITTER_LINK}>
           <span>Twitter</span>
           <Twitter />
         </a>
