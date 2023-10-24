@@ -8,7 +8,7 @@ import { SITE } from './src/constants'
 
 export default defineConfig({
   site: SITE,
-  integrations: [compress(), sitemap()],
+  integrations: [compress({}), sitemap()],
   vite: {
     server: {
       watch: {
