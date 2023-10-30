@@ -22,16 +22,16 @@
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.2",
-    "@astrojs/vercel": "^5.0.2",
+    "@astrojs/vercel": "^5.1.0",
     "astro": "^3.3.3",
-    "astro-compress": "^2.1.5",
+    "astro-compress": "^2.2.0",
     "astro-seo": "^0.8.0",
     "astro-themes": "^0.2.4",
     "markdown-it": "^13.0.2",
     "sanitize-html": "^2.11.0"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.2.1",
+    "@astrojs/check": "^0.3.0",
     "@csstools/postcss-global-data": "^2.1.0",
     "@playwright/test": "^1.39.0",
     "@types/markdown-it": "^13.0.5",
@@ -44,7 +44,7 @@
     "postcss-custom-media": "^10.0.2",
     "postcss-html": "^1.5.0",
     "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.0",
+    "prettier-plugin-astro": "^0.12.1",
     "stylelint": "^15.11.0",
     "stylelint-config-css-modules": "^4.3.0",
     "stylelint-config-html": "^1.1.0",
