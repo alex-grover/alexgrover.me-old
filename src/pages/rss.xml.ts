@@ -6,7 +6,7 @@ import { DESCRIPTION, NAME, SEPARATOR, TAGLINE } from '../constants'
 
 const parser = new MarkdownIt()
 
-export async function get() {
+export async function GET() {
   const posts = await getCollection('writing')
 
   return rss({
