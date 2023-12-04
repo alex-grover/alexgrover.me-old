@@ -24,7 +24,7 @@
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/vercel": "^5.2.0",
     "astro": "^3.6.4",
-    "astro-compress": "^2.2.4",
+    "astro-compress": "2.2.3",
     "astro-seo": "^0.8.0",
     "astro-themes": "^0.2.4",
     "markdown-it": "^13.0.2",
