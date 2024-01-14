@@ -2,13 +2,13 @@ import sitemap from '@astrojs/sitemap'
 import vercel from '@astrojs/vercel/static'
 import postcssGlobalData from '@csstools/postcss-global-data'
 import { defineConfig } from 'astro/config'
-import compress from 'astro-compress'
+import compressor from 'astro-compressor'
 import customMedia from 'postcss-custom-media'
 import { SITE } from './src/constants'
 
 export default defineConfig({
   site: SITE,
-  integrations: [compress(), sitemap()],
+  integrations: [compressor(), sitemap()],
   vite: {
     server: {
       watch: {
