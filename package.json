@@ -21,17 +21,17 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.1",
-    "@astrojs/sitemap": "^3.0.5",
-    "@astrojs/vercel": "^7.3.1",
-    "astro": "^4.4.0",
+    "@astrojs/sitemap": "^3.1.1",
+    "@astrojs/vercel": "^7.3.4",
+    "astro": "^4.4.5",
     "astro-compressor": "^0.4.1",
     "astro-seo": "^0.8.2",
     "astro-themes": "^0.2.5",
     "markdown-it": "^14.0.0",
-    "sanitize-html": "^2.11.0"
+    "sanitize-html": "^2.12.1"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.5.3",
+    "@astrojs/check": "^0.5.6",
     "@csstools/postcss-global-data": "^2.1.1",
     "@playwright/test": "^1.41.2",
     "@types/markdown-it": "^13.0.7",
@@ -41,7 +41,7 @@
     "lint-staged": "^15.2.2",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.35",
-    "postcss-custom-media": "^10.0.2",
+    "postcss-custom-media": "^10.0.3",
     "postcss-html": "^1.6.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
